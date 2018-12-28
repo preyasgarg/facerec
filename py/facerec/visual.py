@@ -29,7 +29,7 @@ def plot_gray(X,  sz=None, filename=None):
         X = X.reshape(sz)
     X = minmax(I, 0, 255)
     fig = plt.figure()
-    implot = plt.imshow(np.asarray(Ig), cmap=cm.gray)
+    implot = plt.imshow(np.asarray(I), cmap=cm.gray)
     if filename is None:
         plt.show()
     else:
