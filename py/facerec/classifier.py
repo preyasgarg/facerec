@@ -179,7 +179,7 @@ class SVM(AbstractClassifier):
         # Predict the Probability:
         results = self.svm.predict_proba(X)[0]
         # Sorts the classes by probability:
-        results_ordered_by_probability = map(lambda x: x[0], sorted(zip(self.svm.classes_, results), key=lambda x: x[1], reverse=True))
+        results_ordered_by_probability = list(map(lambda x: x[0], sorted(zip(self.svm.classes_, results), key=lambda x: x[1], reverse=True)))
         # Take the first item as the predicted label:
         predicted_label = int(results_ordered_by_probability[0])
 
