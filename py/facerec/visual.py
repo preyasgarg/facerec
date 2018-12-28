@@ -27,9 +27,9 @@ def create_font(fontname='Tahoma', fontsize=10):
 def plot_gray(X,  sz=None, filename=None):
     if not sz is None:
         X = X.reshape(sz)
-    X = minmax(I, 0, 255)
+    X = minmax(X, 0, 255)
     fig = plt.figure()
-    implot = plt.imshow(np.asarray(I), cmap=cm.gray)
+    plt.imshow(np.asarray(X), cmap=cm.gray)
     if filename is None:
         plt.show()
     else:
